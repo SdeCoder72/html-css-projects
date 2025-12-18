@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+
+    <!-- use of name attribute: whenever we send info to the backend/database, we should have to describe that what is the name of the value we've described or what is the key to that corresponding value, to ensure where in the db should store the data. -->
+
+    <!-- Value - if we want to give a specific value to the key then we value attribute -->
+
+    <a href="index.html">Basic form structure</a><br>
+    <a href="form_project01.html">Form Project 1</a><br>
+    <a href="form_project02.html">Form Project 2</a><br><br>
+
+    <form action="">
+        <label for="name">Name:</label>
+        <input type="text" name="userName" id="name">
+
+        <br><br>
+        <label for="fName">Father's Name:</label>
+        <input type="text" name="userFname" id="fName">
+
+        <br><br>
+
+        <label for="userAge">Age: </label>
+        <input type="number" name="userAge" id="userAge">
+        <br><br>
+
+        <label for="password">Enter Password</label>
+        <input type="password" name="userPassword" id="password">
+
+        <br><br>
+
+        <label for="genderM">Male</label>
+        <input type="radio" name="gender" id="genderM" value="male">
+
+        <label for="genderF">Female</label>
+        <input type="radio" name="gender" id="genderF" value="female">
+
+        <label for="genderO">Other</label>
+        <input type="radio" name="gender" id="genderO" value="other">
+
+        <br><br>
+
+        <label for="c++">C++</label>
+        <input type="checkbox" name="subject" id="c++" value="C++">
+        <label for="java">Java</label>
+        <input type="checkbox" name="subject" id="java" value="Java">
+        <label for="python">Python</label>
+        <input type="checkbox" name="subject" id="python" value="Python">
+        <label for="javascript">javascript</label>
+        <input type="checkbox" name="subject" id="javascript" value="javascript">
+
+        <br><br>
+
+        <input type="submit">
+    </form>
+
+    <br><br>
+    <a href="../index.html"><button>Go to Main Menu</button></a>
+    <br><br>
+    
+</body>
+</html>
