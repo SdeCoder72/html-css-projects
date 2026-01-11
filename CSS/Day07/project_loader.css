@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.container {
+    width: 400px;
+    height: 400px;
+    /* background-color: rgb(41, 42, 43); */
+    display: flex;
+    position: relative;
+
+}
+.box {
+    width: 50%;
+    height: 50%;
+    background-color: brown;
+    position: absolute;
+    
+}
+.first {
+    animation: first 3s infinite ;
+}
+
+.second {
+    animation: second 3s infinite;
+}
+
+@keyframes first {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+    25% {
+        top: 0px;
+        left: 200px;
+    }
+    50% {
+        top: 200px;
+        left: 200px;
+    }
+    75% {
+        top: 200px;
+        left: 0px;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+    }
+    
+}
+
+@keyframes second {
+    0% {
+        top: 200px;
+        left: 200px;
+    }
+    25% {
+        top: 200px;
+        left: 0px;
+    }
+    50% {
+        top: 0px;
+        left: 0px;
+    }   
+    75% {
+        top: 0px;
+        left: 200px;
+    } 
+    100% {
+        top: 200px;
+        left: 200px;
+    }
+}
+
+
+
