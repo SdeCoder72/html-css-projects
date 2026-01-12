@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position property</title>
+    <style>
+        /*
+        Staic: by default the position of elements are static: means Position according to the normal flow of the document and you can't apply any left, right, top, bottom and z-index property in it. In simple words 'Jaha par tha wahi rahega no matter aap usko kitni bhi left, right property de do.'
+         */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Whatever position property you apply(other than static), the child with absolute positioning will position itself according to the parent
+        Note: But some properties like - transform, filter or perspective can also make an element appear as positioned. 
+        */
+        .container {
+            padding: 20px;
+            border: 2px solid black;
+            margin: 30px;
+            /* Can make element positioned: */
+            /* position: absolute;  */
+            /* transform: translate(0); */
+            /* filter: invert(0); */
+            perspective: 0;
+            height: 400vh;
+        }
+        .container div {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+    
+        }
+
+         /* 
+         Absolute: It is relative to the nearest positioned ancestor. means agar iske nearest parent m koi position property applied hai other than static to ye element uske according apna position modify karega after applying left, right, top, bottom etc. But agar koi position applied nahi hai in the hierarchy then it will be relative to the html/body.
+         */
+        .box1 {
+            background-color: yellow;
+            position: absolute;
+            top: 0px;
+            left: 10px;
+            top: 10px;
+        }
+        /* 
+        Relative: position relative to its normal(original) position. We can move it to top, bottom, left and right without affecting the layout of the sorrounding element.
+        means: element apni real position k according move hota hai. agar ham ise top se 10px niche kare to wo apni purani jagah se niche aa jayga but rest of the element pr iska fark nahi padega.
+        
+        */
+        .box2 {
+            background-color: gray;
+            position: relative;
+            left: 30px;
+            top: 31px;
+            z-index: 3;
+        }
+
+        /* 
+        Fixed: Element is positioned relative to its browser window
+        Aap jaha par bhi element set karoge wo usi stick ho jayega no matter aap kitna bhi scroll karo, it'll not displaced.
+        */
+        .box3 {
+            background-color: powderblue;
+            /* position: fixed; */
+            left: 100px;
+        }
+
+        /* 
+        Sticky: A hybrid of static and fixed. Element behaves like static untill it reaches a specified scroll point. Then it sticks there.
+        means: jab tak ham scroll karke k us tk reach nahi karte wo apni jagah par rehta h but jese hi aap us tak reach krte ho it sticks at specified position given in left, right etc.
+        */
+        .box4 {
+            background-color: pink;
+            position: sticky;
+            top: 0px;
+            z-index: 5;
+        }
+
+        /* 
+        z-index : ensures which element stays on the top of another. Only applied when position is anything other than static
+        */
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+</body>
+</html>
