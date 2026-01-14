@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables</title>
+</head>
+<style>
+    :root {
+        --color: gray;
+        --secondary-color: rgb(32, 31, 31);
+        --text: rgb(236, 230, 230);
+        --default-padding-lr: 15px;
+        --default-padding-tb: 10px;
+        --border: 2px solid rgb(48, 46, 46);
+    }
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+    .nav {
+        background-color: gray;
+        padding: 20px;
+    }
+    ul {
+        display: flex;
+        gap: 20px;
+
+    }
+    ul li {
+        list-style: none;
+        background-color: var(--secondary-color);
+        color: var(--text);
+        padding: var(--default-padding-tb) var(--default-padding-lr);
+        border-radius: 15px;
+    }
+    .container {
+        border: var(--border);
+        padding: var(--default-padding-tb);
+    }
+
+</style>
+<body>
+    <nav class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ut dolor dolores consequuntur autem, aliquam optio similique impedit illum vel placeat totam quaerat explicabo. Mollitia, reprehenderit? Eveniet excepturi doloribus dolore!</div>
+</body>
+</html>

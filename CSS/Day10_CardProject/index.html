@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(29, 27, 27);
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #cec9c9;
+        }
+        .container {
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 5px 0 10px black;
+            background-color: #eeeaea;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px 10px 0px 0px;
+        }
+        .info {
+            padding: 10px;
+        }
+        span {
+            color: goldenrod;
+        }
+        h1, p {
+            padding-bottom: 15px;
+        }
+        .available-time {
+            margin-bottom: 20px;
+        }
+        h3 {
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        .available-time button {
+            padding: 7px 12px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 5px;
+            background-color: #9e9797;
+        }
+        .available-time button:hover {
+            background-color: rgb(141, 93, 141);
+            color: rgb(66, 7, 66);
+            transition: all 0.7s ease;
+            cursor: pointer;
+        }
+        .reserve {
+            border: none;
+            background-color: #eeeaea;
+            color: rgb(73, 7, 73);
+            font-size: 1.01rem;
+            cursor: pointer;
+
+        }
+        .reserve:hover {
+            color: rgb(58, 3, 58);
+        }
+        .para {
+            font-weight: 200;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="cafe.jpg" alt="card-img">
+        <div class="info">
+            <h2>Cafe Badilico</h2>
+            <p><span>★★★★☆</span> 4.1/5 (527)</p>
+            <p>$. Italian, Cafe</p>
+            <p class="para">Small plates, salads & sandwiches an itimate setting with 12 indoor seats + patio seating.</p>
+            <hr>
+            <h3>Tonight's availability</h3>
+            <div class="available-time">
+                <button>5:30PM</button>
+                <button>7:30PM</button>
+                <button>8:00PM</button>
+                <button>9:00PM</button>
+            </div>
+            <button class="reserve">RESERVE</button>
+        </div>
+    </div>
+</body>
+</html>
